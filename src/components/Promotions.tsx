@@ -3,6 +3,13 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { BadgePercent, Calendar, Timer } from "lucide-react";
 
+// Scroll to Contact section on CTA click
+const scrollToContact = (e: React.MouseEvent<HTMLButtonElement>) => {
+  e.preventDefault();
+  const el = document.getElementById("contact");
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
 const Promotions = () => {
   // Calculate the end date for the promotion (60 days from now)
   const today = new Date();
@@ -58,7 +65,7 @@ const Promotions = () => {
               </p>
             </div>
             
-            <Button className="w-full btn-primary">
+            <Button className="w-full btn-primary" onClick={scrollToContact}>
               Claim This Offer Now
             </Button>
           </div>
@@ -66,14 +73,14 @@ const Promotions = () => {
         
         {/* Second Promotion */}
         <div className="bg-white rounded-lg overflow-hidden shadow-lg border-2 border-roof-blue">
-          <div className="bg-roof-blue text-white p-4 flex items-center justify-between">
+          <div className="bg-roof-blue p-4 flex items-center justify-between">
             <div className="flex items-center">
-              <BadgePercent size={24} className="mr-2" />
-              <h3 className="text-xl font-bold">Financing Special</h3>
+              <BadgePercent size={24} className="mr-2 text-white" />
+              <h3 className="text-xl font-bold text-white">Financing Special</h3>
             </div>
             <div className="flex items-center">
-              <Timer size={18} className="mr-1" />
-              <span className="text-sm">Limited Time</span>
+              <Timer size={18} className="mr-1 text-white" />
+              <span className="text-sm text-white">Limited Time</span>
             </div>
           </div>
           
@@ -96,7 +103,7 @@ const Promotions = () => {
               </p>
             </div>
             
-            <Button className="w-full btn-secondary">
+            <Button className="w-full btn-secondary" onClick={scrollToContact}>
               Check Your Eligibility
             </Button>
           </div>
@@ -108,7 +115,7 @@ const Promotions = () => {
         <p className="mb-6">
           Contact our team to learn about additional promotions and discounts that may be available for your specific project.
         </p>
-        <Button className="btn-primary">
+        <Button className="btn-primary" onClick={scrollToContact}>
           Contact Us Today
         </Button>
       </div>

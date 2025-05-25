@@ -3,6 +3,13 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin } from "lucide-react";
 
+// Scroll to Contact section on CTA click
+const scrollToContact = (e: React.MouseEvent<HTMLButtonElement>) => {
+  e.preventDefault();
+  const el = document.getElementById("contact");
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20">
@@ -13,6 +20,14 @@ const Hero = () => {
           style={{backgroundImage: "url('/roof-hero.jpg')"}}
         ></div>
       </div>
+      
+      {/* High-res worker photo overlay in corner for authenticity */}
+      <img
+        src="/canadian-workers.jpg"
+        alt="Canadian metal roofing workers"
+        className="hidden md:block absolute right-10 bottom-0 w-72 rounded-xl shadow-xl border-4 border-white object-cover z-20"
+        style={{maxWidth:"400px", height:"auto"}}
+      />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl text-white">
@@ -32,11 +47,17 @@ const Hero = () => {
           </p>
           
           <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex">
-            <Button className="btn-primary w-full md:w-auto text-lg group">
+            <Button
+              className="btn-primary w-full md:w-auto text-lg group"
+              onClick={scrollToContact}
+            >
               Free Digital Consultation
               <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button className="btn-outline bg-white/20 backdrop-blur-sm border-white text-white hover:bg-white hover:text-roof-dark w-full md:w-auto text-lg">
+            <Button
+              className="btn-outline bg-white/20 backdrop-blur-sm border-white text-white hover:bg-white hover:text-roof-dark w-full md:w-auto text-lg"
+              onClick={scrollToContact}
+            >
               Get A Free Estimate
             </Button>
           </div>
