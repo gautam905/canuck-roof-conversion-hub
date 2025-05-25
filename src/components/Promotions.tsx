@@ -66,7 +66,7 @@ const Promotions = () => {
             </div>
             
             <Button className="w-full btn-primary" onClick={scrollToContact}>
-              Claim This Offer Now
+              Claim your financing option
             </Button>
           </div>
         </div>
@@ -104,7 +104,7 @@ const Promotions = () => {
             </div>
             
             <Button className="w-full btn-secondary" onClick={scrollToContact}>
-              Check Your Eligibility
+              Claim your financing option
             </Button>
           </div>
         </div>
@@ -116,7 +116,7 @@ const Promotions = () => {
           Contact our team to learn about additional promotions and discounts that may be available for your specific project.
         </p>
         <Button className="btn-primary" onClick={scrollToContact}>
-          Contact Us Today
+          Claim your financing option
         </Button>
       </div>
     </section>

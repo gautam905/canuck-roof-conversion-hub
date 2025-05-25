@@ -20,16 +20,20 @@ const Hero = () => {
           style={{backgroundImage: "url('/roof-hero.jpg')"}}
         ></div>
       </div>
-      
-      {/* High-res worker photo overlay in corner for authenticity */}
-      <img
-        src="/canadian-workers.jpg"
-        alt="Canadian metal roofing workers"
-        className="hidden md:block absolute right-10 bottom-0 w-72 rounded-xl shadow-xl border-4 border-white object-cover z-20"
-        style={{maxWidth:"400px", height:"auto"}}
+
+      {/* High-res GIF of Canadian flag in the top right corner */}
+      {/* 
+        TIP: Place your own GIF in public/ and reference as needed.
+        Using a public CDN-hosted Canadian flag GIF for demonstration.
+      */}
+      <img 
+        src="https://media.giphy.com/media/Wdej6MZBTSyliA9tOc/giphy.gif"
+        alt="Canadian flag fluttering"
+        className="absolute top-6 right-6 w-28 md:w-40 z-30 rounded-xl shadow-xl border-4 border-white object-cover"
+        style={{height: 'auto'}}
       />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 font-sans">
         <div className="max-w-3xl text-white">
           <div className="flex items-center mb-4">
             <MapPin size={20} className="text-roof-red mr-2" />
@@ -47,18 +51,25 @@ const Hero = () => {
           </p>
           
           <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex">
+            {/* Update CTA buttons */}
             <Button
               className="btn-primary w-full md:w-auto text-lg group"
               onClick={scrollToContact}
             >
-              Free Digital Consultation
+              Book Consultation
               <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
               className="btn-outline bg-white/20 backdrop-blur-sm border-white text-white hover:bg-white hover:text-roof-dark w-full md:w-auto text-lg"
               onClick={scrollToContact}
             >
-              Get A Free Estimate
+              Request Estimate
+            </Button>
+            <Button
+              className="btn-secondary w-full md:w-auto text-lg"
+              onClick={scrollToContact}
+            >
+              Schedule Visit
             </Button>
           </div>
           
