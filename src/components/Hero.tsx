@@ -22,13 +22,13 @@ const Hero = () => {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
-            Premium Metal Roofing<br />
-            <span className="text-roof-red">100% Canadian Made</span>
+            Solaris Roofs<br />
+            <span className="text-roof-red">Premium Metal Roofing</span>
           </h1>
           
           <p className="text-xl mb-8">
             Tariff-FREE metal roofing with a 50-year transferable warranty.
-            Protect your home with the last roof you'll ever need.
+            Upgrade your home with the last roof you'll ever need—proudly Canadian-made and Canadian-sourced steel!
           </p>
           
           <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex">

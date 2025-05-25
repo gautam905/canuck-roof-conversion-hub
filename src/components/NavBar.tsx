@@ -1,126 +1,23 @@
 
-import React, { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import React from "react";
 
 const NavBar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  // Handle scroll effect for navbar
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
-    <header
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
-      }`}
-    >
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        {/* Logo */}
-        <div className="flex items-center">
-          <span className="text-roof-blue font-bold text-2xl">Canuck Roof</span>
+    <nav className="w-full bg-white shadow-sm fixed top-0 left-0 z-30">
+      <div className="container mx-auto flex items-center justify-between px-4 py-2">
+        <div className="flex items-center space-x-3">
+          <img src="/lovable-uploads/45b157b3-5c7a-4c54-a723-c5bef0938c12.png" alt="Solaris Roofs Logo" className="h-12 w-auto" />
+          <span className="text-2xl font-bold text-roof-red tracking-wide">Solaris Roofs</span>
         </div>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
-          <a href="#features" className="text-roof-dark hover:text-roof-blue font-medium">
-            Why Metal Roofing
-          </a>
-          <a href="#services" className="text-roof-dark hover:text-roof-blue font-medium">
-            Services
-          </a>
-          <a href="#warranty" className="text-roof-dark hover:text-roof-blue font-medium">
-            Warranty
-          </a>
-          <a href="#about" className="text-roof-dark hover:text-roof-blue font-medium">
-            About Us
-          </a>
-          <a href="#contact" className="text-roof-dark hover:text-roof-blue font-medium">
-            Contact
-          </a>
-        </nav>
-
-        {/* Phone Button */}
-        <div className="hidden md:block">
-          <Button className="btn-primary flex items-center gap-2">
-            <Phone size={18} />
-            <span>Call Us Now</span>
-          </Button>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          <button onClick={toggleMenu} className="p-2">
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+        <div className="hidden md:flex items-center space-x-8">
+          <a href="#promotions" className="hover:text-roof-red font-medium transition">Promotions</a>
+          <a href="#features" className="hover:text-roof-red font-medium transition">Why Metal?</a>
+          <a href="#services" className="hover:text-roof-red font-medium transition">Our Services</a>
+          <a href="#about" className="hover:text-roof-red font-medium transition">About</a>
+          <a href="#contact" className="btn-primary px-6 py-2 rounded-md font-semibold text-white transition ml-3">Get a Quote</a>
         </div>
       </div>
-
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg absolute w-full">
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <a
-              href="#features"
-              onClick={toggleMenu}
-              className="text-roof-dark hover:text-roof-blue font-medium py-2"
-            >
-              Why Metal Roofing
-            </a>
-            <a
-              href="#services"
-              onClick={toggleMenu}
-              className="text-roof-dark hover:text-roof-blue font-medium py-2"
-            >
-              Services
-            </a>
-            <a
-              href="#warranty"
-              onClick={toggleMenu}
-              className="text-roof-dark hover:text-roof-blue font-medium py-2"
-            >
-              Warranty
-            </a>
-            <a
-              href="#about"
-              onClick={toggleMenu}
-              className="text-roof-dark hover:text-roof-blue font-medium py-2"
-            >
-              About Us
-            </a>
-            <a
-              href="#contact"
-              onClick={toggleMenu}
-              className="text-roof-dark hover:text-roof-blue font-medium py-2"
-            >
-              Contact
-            </a>
-            <Button className="btn-primary flex items-center justify-center gap-2">
-              <Phone size={18} />
-              <span>Call Us Now</span>
-            </Button>
-          </div>
-        </div>
-      )}
-    </header>
+    </nav>
   );
 };
 

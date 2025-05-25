@@ -1,16 +1,24 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import React, { useEffect } from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const ContactForm = () => {
+  // Load the external script for the form integration
+  useEffect(() => {
+    if (!document.getElementById("msgsndr-form-embed")) {
+      const script = document.createElement("script");
+      script.id = "msgsndr-form-embed";
+      script.src = "https://link.msgsndr.com/js/form_embed.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <section id="contact" className="section-container bg-white">
       <h2 className="section-title">Get Your Free Estimate</h2>
       <p className="section-subtitle">
-        Contact us today to learn more about our premium metal roofing solutions
+        Contact us today to learn more about our premium Solaris Roofs metal roofing solutions
         and schedule your free digital consultation.
       </p>
 
@@ -33,7 +41,7 @@ const ContactForm = () => {
                 <Mail className="text-roof-blue mr-4 mt-1 shrink-0" />
                 <div>
                   <p className="font-medium">Email</p>
-                  <p className="text-roof-gray">info@canuckroof.ca</p>
+                  <p className="text-roof-gray">info@solarisroofs.ca</p>
                 </div>
               </div>
               
@@ -84,95 +92,34 @@ const ContactForm = () => {
           </div>
         </div>
         
-        {/* Contact Form */}
+        {/* Custom Contact Form Embed */}
         <div className="lg:col-span-2 bg-roof-light p-8 rounded-lg">
           <h3 className="text-xl font-bold mb-6">Send Us a Message</h3>
-          
-          <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label htmlFor="firstName" className="font-medium">
-                  First Name*
-                </label>
-                <Input
-                  id="firstName"
-                  placeholder="Enter your first name"
-                  className="bg-white"
-                  required
-                />
-              </div>
-              
-              <div className="space-y-2">
-                <label htmlFor="lastName" className="font-medium">
-                  Last Name*
-                </label>
-                <Input
-                  id="lastName"
-                  placeholder="Enter your last name"
-                  className="bg-white"
-                  required
-                />
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label htmlFor="email" className="font-medium">
-                  Email*
-                </label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="Enter your email"
-                  className="bg-white"
-                  required
-                />
-              </div>
-              
-              <div className="space-y-2">
-                <label htmlFor="phone" className="font-medium">
-                  Phone*
-                </label>
-                <Input
-                  id="phone"
-                  placeholder="Enter your phone number"
-                  className="bg-white"
-                  required
-                />
-              </div>
-            </div>
-            
-            <div className="space-y-2">
-              <label htmlFor="address" className="font-medium">
-                Address
-              </label>
-              <Input
-                id="address"
-                placeholder="Enter your address"
-                className="bg-white"
-              />
-            </div>
-            
-            <div className="space-y-2">
-              <label htmlFor="message" className="font-medium">
-                Message
-              </label>
-              <Textarea
-                id="message"
-                placeholder="Tell us about your roofing needs"
-                className="bg-white"
-                rows={5}
-              />
-            </div>
-            
-            <div className="text-sm text-roof-gray">
-              By submitting this form, you agree to our privacy policy. Your information will never be shared with third parties.
-            </div>
-            
-            <Button type="submit" className="btn-primary w-full md:w-auto">
-              Get Free Estimate
-            </Button>
-          </form>
+          <div className="w-full min-h-[500px]">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/bcoTZuyGpa7O4RSDx5wr"
+              style={{
+                width: "100%",
+                height: "800px",
+                border: "none",
+                borderRadius: "4px"
+              }}
+              id="inline-bcoTZuyGpa7O4RSDx5wr"
+              data-layout='{"id":"INLINE"}'
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Contact Us"
+              data-height="800"
+              data-layout-iframe-id="inline-bcoTZuyGpa7O4RSDx5wr"
+              data-form-id="bcoTZuyGpa7O4RSDx5wr"
+              title="Contact Us"
+              allow="clipboard-write"
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
