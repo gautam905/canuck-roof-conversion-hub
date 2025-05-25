@@ -38,7 +38,7 @@ const Promotions = () => {
           <div className="bg-roof-red text-white p-4 flex items-center justify-between">
             <div className="flex items-center">
               <BadgePercent size={24} className="mr-2" />
-              <h3 className="text-xl font-bold">Spring Special</h3>
+              <h3 className="text-xl font-bold text-white">Spring Special</h3>
             </div>
             <div className="flex items-center">
               <Timer size={18} className="mr-1" />
@@ -109,7 +109,83 @@ const Promotions = () => {
           </div>
         </div>
       </div>
-      
+       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+        {/* First Promotion */}
+        <div className="bg-white rounded-lg overflow-hidden shadow-lg border-2 border-roof-red">
+          <div className="bg-roof-red text-white p-4 flex items-center justify-between">
+            <div className="flex items-center">
+              <BadgePercent size={24} className="mr-2" />
+              <h3 className="text-xl font-bold text-white">Show Home Savings Program</h3>
+            </div>
+            <div className="flex items-center">
+              <Timer size={18} className="mr-1" />
+              <span className="text-sm">Limited Time</span>
+            </div>
+          </div>
+          
+          <div className="p-6">
+            <div className="text-3xl font-bold text-center mb-4">
+              Show Home  <span className="text-roof-red">Savings Program</span>
+            </div>
+            
+            <p className="mb-4">
+              When you become a Solaris Show Home we provide you with a discount on material and installation.
+            </p>
+            
+            <div className="bg-roof-light p-4 rounded-lg mb-4">
+              <div className="flex items-center mb-2">
+                <Calendar size={18} className="text-roof-red mr-2" />
+                <p className="font-medium">Offer valid until: {formatDate(endDate)}</p>
+              </div>
+              <p className="text-sm text-roof-gray">
+                *Discount amount varies based on project size. Minimum project value applies.
+              </p>
+            </div>
+            
+            <Button className="w-full btn-primary" onClick={scrollToContact}>
+              Claim your financing option
+            </Button>
+          </div>
+        </div>
+        
+        {/* Second Promotion */}
+        <div className="bg-white rounded-lg overflow-hidden shadow-lg border-2 border-roof-blue">
+          <div className="bg-roof-blue p-4 flex items-center justify-between">
+            <div className="flex items-center">
+              <BadgePercent size={24} className="mr-2 text-white" />
+              <h3 className="text-xl font-bold text-white">Free Digital Home Consulatation</h3>
+            </div>
+            <div className="flex items-center">
+              <Timer size={18} className="mr-1 text-white" />
+              <span className="text-sm text-white">Limited Time</span>
+            </div>
+          </div>
+          
+          <div className="p-6">
+            <div className="text-3xl font-bold text-center mb-4">
+              <span className="text-roof-blue">Get a Free Map Estimate of Your Roof  </span> 
+            </div>
+            
+            <p className="mb-4">
+             100% Accurate sattelite Measurements done with full finanacing option Restrictions may apply. Subject to change without notice
+            </p>
+            
+            <div className="bg-roof-light p-4 rounded-lg mb-4">
+              <div className="flex items-center mb-2">
+                <Calendar size={18} className="text-roof-blue mr-2" />
+                <p className="font-medium">Offer valid until: {formatDate(endDate)}</p>
+              </div>
+              <p className="text-sm text-roof-gray">
+               *Discount amount varies based on project size. Minimum project value applies.
+              </p>
+            </div>
+            
+            <Button className="w-full btn-secondary" onClick={scrollToContact}>
+              Claim your financing option
+            </Button>
+          </div>
+        </div>
+      </div>
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold mb-4">Want to see more special offers?</h3>
         <p className="mb-6">

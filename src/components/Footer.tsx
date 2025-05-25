@@ -15,7 +15,7 @@ const Footer = () => {
               Premium metal roofing solutions across Canada. 100% Canadian-made quality with 50-year transferable warranty.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-roof-red">
+              <a href="https://www.facebook.com/solarisroofs/" target="_blank" className="text-white hover:text-roof-red">
                 <Facebook size={20} />
               </a>
             </div>
@@ -64,11 +64,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center">
                 <Phone size={16} className="mr-2 text-roof-red" />
-                <span className="text-white/80">(555) 123-4567</span>
+                <span className="text-white/80"><a href="tel:(289) 210-9421">(289) 210-9421</a></span>
               </li>
               <li className="flex items-center">
                 <Mail size={16} className="mr-2 text-roof-red" />
-                <span className="text-white/80">info@solarisroofs.ca</span>
+                <span className="text-white/80">solomon@solarisroofs.com</span>
               </li>
               <li className="flex items-start">
                 <MapPin size={16} className="mr-2 mt-1 text-roof-red" />

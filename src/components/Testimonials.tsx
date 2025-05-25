@@ -36,24 +36,24 @@ const TestimonialCard = ({
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Robert Thompson",
-      location: "Toronto, ON",
+      name: " Anthony Tascione",
+      location: "",
       quote:
-        "The metal roof installed by Canuck Roof completely transformed our home. The quality is exceptional, and the 50-year warranty gives us peace of mind we never had with our old asphalt roof.",
+        "I first off want to start by saying how professional Solomon and his team were during the consultation and instalment of our new roof. From start to finish, Solomon was always available to answer any questions that we had. He sat down with us and explained the process step by step. His team was efficient and clean during installation and the workmanship was beyond beautiful. We are so amazed at how our roof turned out. What a difference it makes and it definitely is a show stopper. We are at ease knowing our home is protected. Thank you so much and we will definitely be referring Solaris Roofing to our family and friends. What a job well done!",
       stars: 5,
     },
     {
-      name: "Sarah Johnson",
-      location: "Vancouver, BC",
+      name: " Chris Marit",
+      location: "",
       quote:
-        "I was hesitant about metal roofing at first, but after their digital consultation showing what it would look like on our home, I was sold. The finished product looks amazing!",
+        "I hired Solaris to install a new metal roof on my semi-detached home in Toronto. From the initial sales consultation to the installation, the people at Solaris were professional, reliable and easy to deal with; I had several interactions with Solomon - the owner - and he made the whole experience simple and enjoyable.We love the look of our new roof, the peace of mind we get from the 50 year warranty and we’ve noticed the house is much cooler.",
       stars: 5,
     },
     {
-      name: "Michael Chen",
-      location: "Calgary, AB",
+      name: "Sue C",
+      location: "",
       quote:
-        "Their financing options made upgrading to a metal roof possible for us. The installation team was professional and the roof has already survived a major hailstorm without a scratch.",
+        "Solomon was quite knowledgeable, professional and quick to meet our roofing needs. He was able to overcome unforeseen supply demands and effectively give us the best product for the best rate. His team was focused, professional and able to answer our questions throughout the process. We couldn't have a more beautiful roof for our rural home. The product is excellent and has improved the value of our home considerably. Solomon ensured our unique needs and wishes were meet and exceeded. We highly recommend Solomon and his team at Solaris Roofing!",
       stars: 5,
     },
   ];

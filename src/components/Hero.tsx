@@ -26,18 +26,18 @@ const Hero = () => {
         TIP: Place your own GIF in public/ and reference as needed.
         Using a public CDN-hosted Canadian flag GIF for demonstration.
       */}
-      <img 
+      {/* <img 
         src="https://media.giphy.com/media/Wdej6MZBTSyliA9tOc/giphy.gif"
         alt="Canadian flag fluttering"
         className="absolute top-6 right-6 w-28 md:w-40 z-30 rounded-xl shadow-xl border-4 border-white object-cover"
         style={{height: 'auto'}}
-      />
-
+      /> */}
+ 
       <div className="container mx-auto px-4 relative z-10 font-sans">
         <div className="max-w-3xl text-white">
           <div className="flex items-center mb-4">
             <MapPin size={20} className="text-roof-red mr-2" />
-            <span className="font-medium">Serving All of Canada</span>
+            <span className="font-medium">Serving All of Ontario</span>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">

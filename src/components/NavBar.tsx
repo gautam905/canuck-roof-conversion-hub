@@ -21,7 +21,7 @@ const NavBar = () => {
           <a href="#features" className="hover:text-roof-red font-medium transition">Why Metal?</a>
           <a href="#services" className="hover:text-roof-red font-medium transition">Our Services</a>
           <a href="#about" className="hover:text-roof-red font-medium transition">About</a>
-          <a href="#contact" onClick={scrollToContact} className="btn-primary px-6 py-2 rounded-md font-semibold text-white transition ml-3">Get a Quote</a>
+          <a href="tel:(289) 210-9421" className="btn-primary px-6 py-2 rounded-md font-semibold text-white transition ml-3">(289) 210-9421</a>
         </div>
       </div>
     </nav>
