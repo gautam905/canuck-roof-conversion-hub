@@ -27,7 +27,7 @@ const AboutUs = () => {
           </h2>
           
           <p className="text-roof-gray mb-6">
-            At Canuck Roof, we're proud to offer 100% Canadian-made metal roofing products. Our commitment to quality and supporting the local economy means we exclusively source and manufacture our premium metal roofing in Canada.
+            At Solaris Roofs, we're proud to offer 100% Canadian-made metal roofing products. Our commitment to quality and supporting the local economy means we exclusively source and manufacture our premium metal roofing in Canada.
           </p>
           
           <div className="space-y-4 mb-8">
