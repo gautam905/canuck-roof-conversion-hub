@@ -9,6 +9,7 @@ import WarrantyFinance from "@/components/WarrantyFinance";
 import AboutUs from "@/components/AboutUs";
 import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
+import ContactFormAbove from "@/components/contactform-above";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -16,6 +17,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <NavBar />
       <Hero />
+      <ContactFormAbove />
       <Promotions />
       <Features />
       <Services />

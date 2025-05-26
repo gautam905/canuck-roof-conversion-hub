@@ -48,11 +48,11 @@ const Promotions = () => {
           
           <div className="p-6">
             <div className="text-3xl font-bold text-center mb-4">
-              Save Up To <span className="text-roof-red">$3,500</span>
+              Save Up To <span className="text-roof-red">$2,500</span>
             </div>
             
             <p className="mb-4">
-              Book your free consultation today and receive up to $3,500 off your new metal roof installation. Take advantage of this special offer before the summer rush begins!
+              Book your free consultation today and receive up to $2,500 off your new metal roof installation. Take advantage of this special offer before the summer rush begins!
             </p>
             
             <div className="bg-roof-light p-4 rounded-lg mb-4">
