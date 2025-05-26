@@ -6,7 +6,7 @@ import { ArrowRight, MapPin } from "lucide-react";
 // Scroll to Contact section on CTA click
 const scrollToContact = (e: React.MouseEvent<HTMLButtonElement>) => {
   e.preventDefault();
-  const el = document.getElementById("contact");
+  const el = document.getElementById("contact-above");
   if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
