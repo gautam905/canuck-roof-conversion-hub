@@ -1,7 +1,9 @@
+---
 deployment:
   tasks:
-    - export NODE_ENV=production
-    - cd $REPO && npm install
-    - cd $REPO && npm run build
-    - rm -rf /home/solarisroofs/promo.solarisroofs.com/*
-    - cp -r $REPO/build/* /home/solarisroofs/promo.solarisroofs.com/
+    - export DEPLOYPATH=/home/solarisroofs/promo.solarisroofs.com/
+    - cd $REPO
+    - /bin/npm install
+    - /bin/npm run build
+    - /bin/rm -rf $DEPLOYPATH/*
+    - /bin/cp -R $REPO/build/* $DEPLOYPATH
