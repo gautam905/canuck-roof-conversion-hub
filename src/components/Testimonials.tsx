@@ -26,7 +26,7 @@ const TestimonialCard = ({
       </div>
       <p className="text-roof-gray italic mb-6">"{quote}"</p>
       <div>
-        <p className="font-medium">{name}</p>
+        <p className="font-bold">{name}</p>
         <p className="text-sm text-roof-gray">{location}</p>
       </div>
     </div>

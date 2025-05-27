@@ -72,7 +72,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <MapPin size={16} className="mr-2 mt-1 text-roof-red" />
-                <span className="text-white/80">Serving all provinces and territories across Canada</span>
+                <span className="text-white/80">Serving All of Ontario</span>
               </li>
             </ul>
           </div>
@@ -82,6 +82,9 @@ const Footer = () => {
         <div className="pt-8 border-t border-white/20 text-center md:flex md:justify-between md:items-center">
           <p className="text-white/60 mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} Solaris Roofs. All rights reserved.
+          </p>
+          <p className="text-white/60 mb-4 md:mb-0">
+           <a href="http://905local.com" target="_blank" rel="nofollow">Made with ❤ by 905local.com</a>
           </p>
           <div className="space-x-4">
             <a href="https://www.solarisroofs.com/privacy-policy-2/" className="text-white/60 hover:text-white" target="_blank" rel="noopener noreferrer">

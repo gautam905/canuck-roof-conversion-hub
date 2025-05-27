@@ -24,10 +24,10 @@ const NavBar = () => {
   };
   const NavItems = ({ onItemClick }: { onItemClick?: () => void }) => (
     <>
-      <a href="#promotions" onClick={onItemClick} className="hover:text-roof-red font-medium transition">Promotions</a>
-      <a href="#features" onClick={onItemClick} className="hover:text-roof-red font-medium transition">Why Metal?</a>
-      <a href="#services" onClick={onItemClick} className="hover:text-roof-red font-medium transition">Our Services</a>
-      <a href="#about" onClick={onItemClick} className="hover:text-roof-red font-medium transition">About</a>
+      <a href="#promotions" onClick={onItemClick} className="hover:text-roof-red font-bold transition ">Promotions</a>
+      <a href="#features" onClick={onItemClick} className="hover:text-roof-red font-bold transition">Why Metal Roof</a>
+      <a href="#services" onClick={onItemClick} className="hover:text-roof-red font-bold transition">Our Services</a>
+      <a href="#about" onClick={onItemClick} className="hover:text-roof-red font-bold transition">About</a>
       <a href="tel:(289) 210-9421" onClick={onItemClick} className="btn-primary px-6 py-2 rounded-md font-semibold text-white transition text-center">
         (289) 210-9421
       </a>

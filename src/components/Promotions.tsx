@@ -16,7 +16,7 @@ const Promotions = () => {
   // Calculate the end date for the promotion (60 days from now)
   const today = new Date();
   const endDate = new Date(today);
-  endDate.setDate(today.getDate() + 60);
+  endDate.setDate(today.getDate() + 30);
   
   // Format the date
   const formatDate = (date: Date) => {
@@ -68,7 +68,7 @@ const Promotions = () => {
             </div>
             
             <Button className="w-full btn-primary" onClick={scrollToContact}>
-             Claim Summer Offer Now
+             Claim Your Summer Offer Now
             </Button>
           </div>
         </div>
@@ -106,7 +106,7 @@ const Promotions = () => {
             </div>
             
             <Button className="w-full btn-secondary" onClick={scrollToContact}>
-              Claim your financing option
+              Claim Your Financing Option
             </Button>
           </div>
         </div>
@@ -145,7 +145,7 @@ const Promotions = () => {
             </div>
             
             <Button className="w-full btn-primary" onClick={scrollToContact}>
-              Awail Show Home Sawing Program 
+              Avail Show Home Saving Program 
             </Button>
           </div>
         </div>
