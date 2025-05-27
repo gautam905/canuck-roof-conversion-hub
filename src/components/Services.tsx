@@ -2,6 +2,13 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, LayoutGrid, Video, Calendar } from "lucide-react";
+const scrollToContact = (e: React.MouseEvent<HTMLButtonElement>) => {
+  e.preventDefault();
+  const el = document.getElementById("contact-above");
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  }
+};
 
 const ServiceCard = ({
   icon: Icon,
@@ -22,7 +29,7 @@ const ServiceCard = ({
         <p className="text-roof-gray mb-4">{description}</p>
       </div>
       <div className="p-6 bg-white">
-        <Button className="btn-secondary w-full group">
+        <Button className="btn-secondary w-full group" onClick={scrollToContact}>
           {buttonText}
           <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
         </Button>
@@ -67,7 +74,7 @@ const Services = () => {
         <p className="text-lg mb-6 max-w-2xl mx-auto">
           Contact us today for a no-obligation consultation and discover why thousands of Canadian homeowners trust us with their metal roofing projects.
         </p>
-        <Button className="btn-primary text-lg">
+        <Button className="btn-primary text-lg" onClick={scrollToContact}>
           Get Your Free Estimate Today
         </Button>
       </div>

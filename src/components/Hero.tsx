@@ -7,7 +7,9 @@ import { ArrowRight, MapPin } from "lucide-react";
 const scrollToContact = (e: React.MouseEvent<HTMLButtonElement>) => {
   e.preventDefault();
   const el = document.getElementById("contact-above");
-  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  }
 };
 
 const Hero = () => {

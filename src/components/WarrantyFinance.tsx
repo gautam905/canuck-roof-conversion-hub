@@ -2,7 +2,13 @@
 import React from "react";
 import { Shield, DollarSign, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+const scrollToContact = (e: React.MouseEvent<HTMLButtonElement>) => {
+  e.preventDefault();
+  const el = document.getElementById("contact-above");
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  }
+};
 const WarrantyFinance = () => {
   const financingBenefits = [
     "Quick and easy approval process",
@@ -85,7 +91,7 @@ const WarrantyFinance = () => {
             <p className="text-xs text-center">*Based on approved credit and project size</p>
           </div>
           
-          <Button className="w-full bg-white hover:bg-roof-light text-roof-blue">
+          <Button className="w-full bg-white hover:bg-roof-light text-roof-blue" onClick={scrollToContact}>
             Check Your Financing Options
           </Button>
         </div>

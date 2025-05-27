@@ -6,8 +6,10 @@ import { BadgePercent, Calendar, Timer } from "lucide-react";
 // Scroll to Contact section on CTA click
 const scrollToContact = (e: React.MouseEvent<HTMLButtonElement>) => {
   e.preventDefault();
-  const el = document.getElementById("contact");
-  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  const el = document.getElementById("contact-above");
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  }
 };
 
 const Promotions = () => {
@@ -38,7 +40,7 @@ const Promotions = () => {
           <div className="bg-roof-red text-white p-4 flex items-center justify-between">
             <div className="flex items-center">
               <BadgePercent size={24} className="mr-2" />
-              <h3 className="text-xl font-bold text-white">Spring Special</h3>
+              <h3 className="text-xl font-bold text-white">Summer Special</h3>
             </div>
             <div className="flex items-center">
               <Timer size={18} className="mr-1" />
@@ -66,7 +68,7 @@ const Promotions = () => {
             </div>
             
             <Button className="w-full btn-primary" onClick={scrollToContact}>
-              Claim your financing option
+             Claim Summer Offer Now
             </Button>
           </div>
         </div>
@@ -143,7 +145,7 @@ const Promotions = () => {
             </div>
             
             <Button className="w-full btn-primary" onClick={scrollToContact}>
-              Claim your financing option
+              Awail Show Home Sawing Program 
             </Button>
           </div>
         </div>
@@ -181,7 +183,7 @@ const Promotions = () => {
             </div>
             
             <Button className="w-full btn-secondary" onClick={scrollToContact}>
-              Claim your financing option
+              Get a FREE Map Estmate
             </Button>
           </div>
         </div>
@@ -192,7 +194,7 @@ const Promotions = () => {
           Contact our team to learn about additional promotions and discounts that may be available for your specific project.
         </p>
         <Button className="btn-primary" onClick={scrollToContact}>
-          Claim your financing option
+          Ask about our other offers
         </Button>
       </div>
     </section>

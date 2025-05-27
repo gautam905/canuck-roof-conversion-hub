@@ -13,12 +13,14 @@ import { useIsMobile } from "@/hooks/use-mobile";
 const NavBar = () => {
   const isMobile = useIsMobile();
   const [isOpen, setIsOpen] = React.useState(false);
-
   // Scroll to Contact section on CTA click
   const scrollToContact = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const el = document.getElementById("contact-above");
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      setIsOpen(false); // Close mobile menu after clicking
+    }
   };
   const NavItems = ({ onItemClick }: { onItemClick?: () => void }) => (
     <>
