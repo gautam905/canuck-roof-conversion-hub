@@ -5,3 +5,5 @@ deployment:
     - cd $REPO && npm run build
     - rm -rf /home/solarisroofs/promo.solarisroofs.com/*
     - cp -r $REPO/build/* /home/solarisroofs/promo.solarisroofs.com/
+    - cd /home/solarisroofs/promo.solarisroofs.com && npm install --production
+    - cd /home/solarisroofs/promo.solarisroofs.com && npm run start 
